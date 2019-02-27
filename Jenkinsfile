@@ -16,7 +16,7 @@ pipeline {
 		stage('构建镜像'){
 	       steps {
 	       	dir('./'){
-	       		def customImage = docker.build("10.168.14.40/microservice-wxt-frontweb:1.0")
+	       		sh 'docker build -t 10.168.14.40:8101/yrz/microservice-wxt-frontweb:1.0'
 	       	}
 	       }
 		}
