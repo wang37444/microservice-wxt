@@ -13,6 +13,13 @@ pipeline {
 	       	}
 	       }
 		}
+		stage('构建镜像'){
+	       steps {
+	       	dir('./'){
+	       		docker.build("10.168.14.40:8101/yrz/microservice-wxt-frontweb:1.0")
+	       	}
+	       }
+		}
     }
 
 }
