@@ -8,7 +8,9 @@ pipeline {
 	    }
 	    stage('maven编译'){
 	       steps {
-	       		sh './var/maven_home/bin/mvn clean package docker:build'
+	       	dir('./'){
+	       		sh '/var/maven_home/bin/mvn clean package docker:build'
+	       	}
 	       }
 		}
     }
