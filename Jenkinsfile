@@ -6,11 +6,11 @@ pipeline {
 	       		git 'https://github.com/wang37444/microservice-wxt.git'
 	       }
 	    }
-	    
 	    stage('maven编译'){
 	       steps {
 	       		sh clean package docker:build
 	       }
-	    }
+		}
     }
+    
 }
