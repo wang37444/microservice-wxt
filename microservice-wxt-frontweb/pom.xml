@@ -51,11 +51,7 @@
 				<configuration>
 					<!-- 镜像名称 -->
 					<imageName>${docker.image.prefix}/${project.artifactId}:0.0.1</imageName>
-					<!-- 基础镜像，类似于Dockerfile中的FROM指令 -->
-					<baseImage>java</baseImage>
-					<!-- 类似于Dockerfile的ENTRYPOINT指令 -->
-					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
-					<dockerHost>http://10.168.14.56:8375</dockerHost>
+					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
