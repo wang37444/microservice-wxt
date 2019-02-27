@@ -8,7 +8,7 @@ pipeline {
 	    }
 	    stage('maven编译'){
 	       steps {
-	       		sh clean package docker:build
+	       		sh 'mvn clean package docker:build'
 	       }
 		}
     }
