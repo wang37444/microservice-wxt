@@ -9,7 +9,7 @@ pipeline {
 	    stage('maven编译'){
 	       steps {
 	       	dir('./'){
-	       		sh '/var/maven_home/bin/mvn clean install'
+	       		sh 'mvn clean install'
 	       	}
 	       }
 		}
