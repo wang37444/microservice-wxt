@@ -20,6 +20,14 @@ pipeline {
 	       	}
 	       }
 		}
+		
+		stage('镜像上传私库'){
+	       steps {
+	       	dir('./'){
+	       		sh 'sudo docker push 10.168.14.40:8101/yrz/microservice-wxt-frontweb:1.0'
+	       	}
+	       }
+		}
     }
 
 }
